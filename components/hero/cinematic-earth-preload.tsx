@@ -13,9 +13,11 @@ const HERO_TEXTURES = [
 export function CinematicEarthPreload(): ReactNode {
   useEffect(() => {
     void import("@/lib/cinematic-earth/engine.js");
+
     for (const href of HERO_TEXTURES) {
       const existing = document.head.querySelector(`link[data-preload="${href}"]`);
       if (existing) continue;
+
       const link = document.createElement("link");
       link.rel = "preload";
       link.as = "image";
@@ -24,5 +26,6 @@ export function CinematicEarthPreload(): ReactNode {
       document.head.appendChild(link);
     }
   }, []);
+
   return null;
 }
