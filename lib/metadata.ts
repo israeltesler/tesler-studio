@@ -33,7 +33,7 @@ export const baseMetadata: Metadata = {
     default: `${siteConfig.name} | ${siteContent.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteContent.description,
+  description: siteConfig.description,
   keywords: [...siteConfig.keywords],
   authors: [...siteConfig.authors],
   creator: siteConfig.creator,
@@ -57,7 +57,7 @@ export const baseMetadata: Metadata = {
     locale: "he_IL",
     url: siteConfig.url,
     title: siteConfig.name,
-    description: siteContent.description,
+    description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
@@ -71,7 +71,7 @@ export const baseMetadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
-    description: siteContent.description,
+    description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: siteConfig.creator,
   },
